@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.min.todolist.HomeFragment"
+        android:label="Beranda"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/allTasksFragment"
+        android:name="com.min.todolist.AllTasksFragment"
+        android:label="Semua Tugas"
+        tools:layout="@layout/fragment_all_tasks" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.min.todolist.CategoryFragment"
+        android:label="Kategori"
+        tools:layout="@layout/fragment_category" />
+</navigation>

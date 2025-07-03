@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">To Do List</string>
+
+    <string-array name="task_categories">
+        <item>Pribadi</item>
+        <item>Pekerjaan</item>
+        <item>Belanja</item>
+        <item>Studi</item>
+        <item>Lainnya</item>
+    </string-array>
+</resources>

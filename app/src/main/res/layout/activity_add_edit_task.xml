@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddEditTaskActivity">
+
+    <!-- 1. TextInputLayout untuk Judul -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul Tugas"
+        android:textColorHint="#BDBDBD"
+        app:boxStrokeColor="@color/material_on_surface_disabled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 2. TextInputLayout untuk Keterangan -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Keterangan (Opsional)"
+        android:textColorHint="#BDBDBD"
+        app:boxStrokeColor="@color/material_on_surface_disabled">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:textColor="@android:color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 3. TextInputLayout untuk Kategori -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menuCategory"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Kategori"
+        android:textColorHint="#BDBDBD"
+        app:boxStrokeColor="@color/material_on_surface_disabled">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:textColor="@android:color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 4. TextView untuk Tanggal -->
+    <TextView
+        android:id="@+id/textViewDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:padding="16dp"
+        android:text="Pilih Tanggal Jatuh Tempo"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@android:color/white"
+        app:drawableStartCompat="@drawable/ic_calendar"
+        app:drawableTint="#BDBDBD" />
+
+    <!-- 5. LinearLayout untuk Waktu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewStartTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="8dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Waktu Mulai"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@android:color/white"
+            app:drawableStartCompat="@drawable/ic_time"
+            app:drawableTint="#BDBDBD" />
+
+        <TextView
+            android:id="@+id/textViewEndTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="8dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Waktu Selesai"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="@android:color/white"
+            app:drawableStartCompat="@drawable/ic_time"
+            app:drawableTint="#BDBDBD" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingVertical="12dp"
+        android:text="Simpan Tugas"
+        android:textSize="16sp" />
+</LinearLayout>
